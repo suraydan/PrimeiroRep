@@ -1,3 +1,5 @@
 FROM ubuntu
 
-RUN apt update && apt install -y curl
+RUN apt update
+RUN apt install -y curl
+RUN apt install -y git
