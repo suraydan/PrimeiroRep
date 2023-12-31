@@ -6,7 +6,7 @@ package main
 import "fmt"
  
 func main() {
-  fmt.Println("hello, world")
+  fmt.Println("Ola Mundo!")
 }
 EOF
 RUN go build -o /bin/hello ./main.go
