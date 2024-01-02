@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meu-pod
+spec:
+  containers:
+    - name: web
+      image: nginx:latest
+    - name: banco-de-dados
+      image: postgres:latest
+      env:
+        - name: POSTGRES_PASSWORD
+          value: "123"
+        - name: POSTGRES_USER
+          value: "minsait"
+        - name: POSTGRES_DB
+          value: "minsait"
