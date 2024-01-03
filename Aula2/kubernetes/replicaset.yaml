@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: meu-replicaset
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: minha-aplicacao
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+    spec:
+      containers:
+        - name: web
+          image: nginx:latest
+        - name: banco-de-dados
+          image: postgres:latest
+          env:
+            - name: POSTGRES_PASSWORD
+              value: "123"
+            - name: POSTGRES_USER
+              value: "minsait"
+            - name: POSTGRES_DB
+              value: "minsait"
